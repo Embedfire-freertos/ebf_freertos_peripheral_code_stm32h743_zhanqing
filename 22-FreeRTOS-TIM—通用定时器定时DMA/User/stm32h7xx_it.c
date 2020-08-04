@@ -38,7 +38,7 @@
 #include "bsp_led.h"
 #include "bsp_debug_usart.h"
 #include "bsp_key.h"
-#include "./tim/bsp_general_tim.h"
+#include "./tim/bsp_advance_tim.h"
 /* FreeRTOSÍ·ÎÄ¼þ */
 #include "FreeRTOS.h"
 #include "task.h"
@@ -163,5 +163,14 @@ void SysTick_Handler(void)
     #endif  /* INCLUDE_xTaskGetSchedulerState */
 }
   
+void  ADVANCE_TIM_IRQHandler (void)
+{
+	HAL_TIM_IRQHandler(&TIM_TimeBaseStructure);	 	
+}
 
+
+void DMA2_Stream3_IRQHandler(void)
+{
+	HAL_DMA_IRQHandler(&TIM_DMA_HANDLE);
+}
 

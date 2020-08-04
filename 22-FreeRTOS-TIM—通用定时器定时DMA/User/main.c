@@ -28,7 +28,7 @@
 #include "bsp_key.h" 
 #include "core_delay.h"   
 #include "bsp_debug_usart.h"
-#include "./tim/bsp_general_tim.h"
+#include "./tim/bsp_advance_tim.h"
 /* FreeRTOS头文件 */
 #include "FreeRTOS.h"
 #include "task.h"
@@ -60,7 +60,6 @@ static TaskHandle_t KEY_Task_Handle = NULL;
  * 
  */
 
-extern void TIM2_SetPWM_pulse(int channel,int compare);
 /******************************* 全局变量声明 ************************************/
 /*
  * 当我们在写应用程序的时候，可能需要用到一些全局变量。
@@ -165,8 +164,6 @@ static void LED_Task(void* parameter)
         LED2_ON;
         vTaskDelay(500);   /* 延时500个tick */
         printf("LED_Task Running,LED1_ON\r\n");
-			
-        TIM2_SetPWM_pulse(1,1000);
 			
         LED2_OFF;     
         vTaskDelay(500);   /* 延时500个tick */		 		

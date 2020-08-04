@@ -809,14 +809,14 @@
               <FilePath>..\..\User\key\bsp_key.c</FilePath>
             </File>
             <File>
-              <FileName>bsp_advance_tim.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\User\tim\bsp_advance_tim.c</FilePath>
-            </File>
-            <File>
               <FileName>FreeRTOSConfig.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\..\User\FreeRTOSConfig.h</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_advance_tim.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\tim\bsp_advance_tim.c</FilePath>
             </File>
           </Files>
         </Group>
